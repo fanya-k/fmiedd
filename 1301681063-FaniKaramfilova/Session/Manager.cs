@@ -35,17 +35,24 @@ namespace Session
                 myConnection.Open();
                 command.CommandText = "SELECT * FROM [User]";
                 command.CommandType = CommandType.Text;
-                OleDbCommand myCommand = new OleDbCommand("SELECT * FROM [User] WHERE ID=3", myConnection); 
+                OleDbCommand myCommand = new OleDbCommand("SELECT * FROM [User]", myConnection); 
                 OleDbDataReader reader = myCommand.ExecuteReader();
                 while (reader.Read())
                 {
                     Users u = new Users();
-                    u.Id = Convert.ToInt32(reader["ID"].ToString());
+                    /*u.Id = Convert.ToInt32(reader["ID"].ToString());
                     u.UserName = reader["Username"].ToString();
                     u.Password = reader["Password"].ToString();
-                    u.Email = reader["E-mail"].ToString();
+                    u.Email = reader["E-mail"].ToString();*/
 
+
+
+                    u.Id = Convert.ToInt32(reader.GetValue(0).ToString());
+                    u.UserName = reader.GetString(1);
+                    
                     usersList.Add(u);
+
+                    
                 }
                 return usersList;
             }

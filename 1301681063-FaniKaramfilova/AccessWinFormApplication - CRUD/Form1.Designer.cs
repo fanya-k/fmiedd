@@ -262,13 +262,13 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnFill;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUserN;
         private System.Windows.Forms.ComboBox cmbCreated;
+        public System.Windows.Forms.TextBox tbEmail;
+        public System.Windows.Forms.TextBox tbPassword;
+        public System.Windows.Forms.TextBox tbUserName;
     }
 }
 
